@@ -20,8 +20,8 @@ class Agent:
                  model_name: str,
                  instructions: str, 
                  tools: List[Tool] = None,
-                 temperature: float = 0.7):
-                 api_key: str = None
+                 temperature: float = 0.7,
+                 api_key: str = None):
         """
         Initialize an Agent
         
