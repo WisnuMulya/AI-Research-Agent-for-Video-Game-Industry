@@ -9,6 +9,12 @@ from lib.messages import AIMessage, BaseMessage
 from lib.parsers import PydanticOutputParser
 
 
+class EvaluationReport(BaseModel):
+    """Metrics for document-retrieval task evaluation"""
+    useful: bool = Field(description="Whether the retreived documents are useful.")
+    description: str = Field(description="Description about the evaluation result")
+
+
 class TaskCompletionMetrics(BaseModel):
     """Metrics for task completion evaluation"""
     task_completed: bool = Field(description="Whether the task was completed successfully")
